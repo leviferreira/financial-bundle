@@ -83,7 +83,7 @@ server:
     packages:
         - vim
         - git
-users_groups:=
+users_groups:
     install: '1'
     groups: {  }
     users: {  }
