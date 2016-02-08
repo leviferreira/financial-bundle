@@ -1,0 +1,26 @@
+CustomerBundle\Entity\Address:
+    type: entity
+    table: null
+    repositoryClass: CustomerBundle\Repository\AddressRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        street:
+            type: string
+            length: 255
+        zipcode:
+            type: string
+            length: 255
+        number:
+            type: integer
+        complement:
+            type: string
+            length: 255
+        city:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

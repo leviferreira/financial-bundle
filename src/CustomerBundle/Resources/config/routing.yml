@@ -1,0 +1,11 @@
+customer_list:
+    path:     /list
+    defaults: { _controller: CustomerBundle:Customer:list }
+
+customer_new:
+    path:     /new
+    defaults: { _controller: CustomerBundle:Customer:new }
+
+customer_create:
+    path:     /create
+    defaults: { _controller: CustomerBundle:Customer:create }

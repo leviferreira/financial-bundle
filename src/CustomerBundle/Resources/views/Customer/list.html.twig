@@ -1,0 +1,41 @@
+{% extends '::base.html.twig' %}
+
+{% block content_content %}
+
+    <a href="{{ path('customer_new') }}"
+       class="btn btn-success">
+        New
+    </a>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Created At</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for customer in customers %}
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a href="#">View</a>
+                    <a href="#">Delete</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">No customer found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
