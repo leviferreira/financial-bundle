@@ -66,7 +66,7 @@ class CustomerController extends Controller
             throw new \InvalidArgumentException('Customer not found');
         }
 
-        return $this->render('CustomerBundle:customer:view.html.twig', [
+        return $this->render('CustomerBundle:Customer:view.html.twig', [
             'customer' => $customer,
         ]);
     }
@@ -82,7 +82,7 @@ class CustomerController extends Controller
 
             $form = $this->createForm(new CustomerType(), $customer);
 
-            return $this->render('CustomerBundle:customer:edit.html.twig', [
+            return $this->render('CustomerBundle:Customer:edit.html.twig', [
                 'form' => $form->createView(),
                 'id' => $id,
             ]);
