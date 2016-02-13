@@ -3,6 +3,7 @@
 namespace CustomerBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Customer
@@ -16,11 +17,13 @@ class Customer
 
     /**
      * @var string
+     * @Assert\Length(min=2)
      */
     private $name;
 
     /**
      * @var string
+     * @Assert\Email()
      */
     private $email;
 
@@ -31,9 +34,19 @@ class Customer
 
 
     /**
+     * @param $id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
+
+    /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -56,7 +69,7 @@ class Customer
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -79,7 +92,7 @@ class Customer
     /**
      * Get email
      *
-     * @return string 
+     * @return string
      */
     public function getEmail()
     {

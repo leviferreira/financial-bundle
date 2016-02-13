@@ -1,4 +1,10 @@
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 customer:
     resource: "@CustomerBundle/Resources/config/routing.yml"
     prefix:   /customer
 
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

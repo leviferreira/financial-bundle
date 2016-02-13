@@ -3,7 +3,7 @@
 namespace CustomerBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Address
  */
@@ -26,6 +26,7 @@ class Address
 
     /**
      * @var int
+     * @Assert\NotBlank(message = "The number is invalid")
      */
     private $number;
 
@@ -121,7 +122,6 @@ class Address
 
     /**
      * Set complement
-     *
      * @param string $complement
      * @return Address
      */

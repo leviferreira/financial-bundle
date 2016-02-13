@@ -18,12 +18,7 @@ class CustomerType extends AbstractType
         $builder
             ->add(
                 'name',
-                'text',
-                [
-                    'attr' => [
-                        'class' => 'col-lg-2',
-                    ],
-                ]
+                'text'
             )
             ->add(
                 'email',

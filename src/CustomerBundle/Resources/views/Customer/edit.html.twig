@@ -6,7 +6,7 @@
     <div class="col-lg-9">
         <form
                 class="well"
-                action="{{ path('customer_create') }}"
+                action="{{ path('customer_update', {'id': id}) }}"
                 method="post">
 
             {{ form_widget(form) }}

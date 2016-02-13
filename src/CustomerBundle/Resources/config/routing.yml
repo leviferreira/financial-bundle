@@ -9,3 +9,19 @@ customer_new:
 customer_create:
     path:     /create
     defaults: { _controller: CustomerBundle:Customer:create }
+
+customer_delete:
+    path:     /{id}/delete
+    defaults: { _controller: CustomerBundle:Customer:delete }
+
+customer_view:
+    path:     /{id}/view
+    defaults: { _controller: CustomerBundle:Customer:view }
+
+customer_edit:
+    path:     /{id}/edit
+    defaults: { _controller: CustomerBundle:Customer:edit }
+
+customer_update:
+    path:     /{id}/update
+    defaults: { _controller: CustomerBundle:Customer:update }

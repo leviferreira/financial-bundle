@@ -1,7 +1,6 @@
 {% extends 'MopaBootstrapBundle::base_less.html.twig' %}
-{#{% extends 'MopaBootstrapBundle::base_initializr.html.twig' %}#}
 
-{% form_theme form 'bootstrap_3_layout.html.twig' %}
+{% from 'MopaBootstrapBundle::flash.html.twig' import session_flash %}
 
 {% block title %}
     Financial Bundle
@@ -13,6 +12,9 @@
 
 {% block page_header %}
     <h1>Financial Bundle</h1>
+    {#{% for item in get_menu() %}#}
+        {#<ul class="{{ item.class }}">{{ item.title }}</ul>#}
+    {#{% endfor %}#}
 {% endblock %}
 
 {% block footer %}

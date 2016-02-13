@@ -22,5 +22,6 @@ CustomerBundle\Entity\Customer:
             joinColumn:
                 name: address_id
                 referencedColumnName: id
+            cascade: ["persist"]
 
     lifecycleCallbacks: {  }
