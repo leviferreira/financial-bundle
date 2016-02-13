@@ -5,6 +5,7 @@ namespace CustomerBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use CustomerBundle\Form\AddressType;
 
 class CustomerType extends AbstractType
 {
@@ -30,18 +31,20 @@ class CustomerType extends AbstractType
             )
             ->add(
                 'address',
-                'integer'
-            )
-        ;
+                AddressType::class,
+                [
+                    'data_class' => 'CustomerBundle\Entity\Address',
+                ]
+            );
     }
-    
+
     /**
      * @param OptionsResolver $resolver
      */
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(array(
+        $resolver->setDefaults([
             'data_class' => 'CustomerBundle\Entity\Customer'
-        ));
+        ]);
     }
 }

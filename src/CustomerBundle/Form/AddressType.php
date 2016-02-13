@@ -43,7 +43,8 @@ class AddressType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'CustomerBundle\Entity\Address'
+            'data_class' => 'CustomerBundle\Entity\Address',
+            'inherit_data' => true
         ));
     }
 }
