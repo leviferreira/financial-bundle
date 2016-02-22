@@ -11,12 +11,9 @@
 {% block content_sidebar %}{% endblock %}
 
 {% block page_header %}
-    <h1>Financial Bundle</h1>
-    {#{% for item in get_menu() %}#}
-        {#<ul class="{{ item.class }}">{{ item.title }}</ul>#}
-    {#{% endfor %}#}
+    <h1>{% trans %}finance.project.name{% endtrans %}</h1>
 {% endblock %}
 
 {% block footer %}
-    <p>Financial Bundle 2016</p>
+    <p>{% trans %}finance.project.copyright{% endtrans %}</p>
 {% endblock %}

@@ -1,16 +1,16 @@
-{% extends '::base.html.twig' %}
+{% extends 'CustomerBundle::layout.html.twig' %}
 
 {% block content_content %}
 
     <a href="{{ path('customer_new') }}"
        class="btn btn-success">
-        New
+        {% trans %}customer.new{% endtrans %}
     </a>
 
     <table class="table">
         <thead>
         <tr>
-            <th>Created At</th>
+            <th>{% trans %}Created At{% endtrans %}</th>
             <th>Id</th>
             <th>Name</th>
             <th>E-mail</th>
